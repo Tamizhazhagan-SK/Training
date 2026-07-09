@@ -6,6 +6,7 @@ public class basic{
         char initial = 'S';
         char initial2 = 'K';
         int num = 24062004;
+        int number = ;
         long phoneNo = 9876543210L;
         float height = 175.0f;
         double weight = 65.5;
