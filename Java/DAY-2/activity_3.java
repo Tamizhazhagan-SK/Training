@@ -54,12 +54,13 @@ class BankAccount {
         System.out.println("Balance: " + String.format("%.2f", balance));
     }
 
+
     public void printMiniStatement() {
         System.out.println("Mini Statement");
-        int start = (index - index + miniStatement.length) % miniStatement.length;
-        for (int i = 0; i < index; i++) {
-            int index = (start + i) % miniStatement.length;
-            System.out.println(miniStatement[index]);
+        int start = (index - count + miniStatement.length) % miniStatement.length;
+        for (int i = 0; i < count; i++) {
+            int itemIndex = (start + i) % miniStatement.length;
+            System.out.println(miniStatement[itemIndex]);
         }
     }
 }
