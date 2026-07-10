@@ -5,29 +5,22 @@ class BankAccount {
     private String accountHolderName;
     private double balance;
     private String[] miniStatement;
-    private int statementIndex;
-    private int statementCount;
+    private int index;
+    private int count;
 
     public BankAccount(String accountNumber, String accountHolderName, double initialBalance) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.balance = initialBalance;
         this.miniStatement = new String[5];
-        this.statementIndex = 0;
-        this.statementCount = 0;
+        this.index = 0;
+        this.count = 0;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public String getAccount(int accountNumber, String accountHolderName, double balance) {
+        return "\nAccount Number" + accountNumber + "\nAccount Name " + accountHolderName + "\nBalance" + balance;
     }
 
-    public String getName() {
-        return accountHolderName;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
 
     public void setName(String accountHolderName) {
         this.accountHolderName = accountHolderName;
@@ -48,10 +41,10 @@ class BankAccount {
     }
 
     private void addTransaction(String transactionMessage) {
-        miniStatement[statementIndex] = transactionMessage;
-        statementIndex = (statementIndex + 1) % miniStatement.length;
-        if (statementCount < miniStatement.length) {
-            statementCount++;
+        miniStatement[index] = transactionMessage;
+        index = (index + 1) % miniStatement.length;
+        if (count < miniStatement.length) {
+            count++;
         }
     }
 
@@ -63,8 +56,8 @@ class BankAccount {
 
     public void printMiniStatement() {
         System.out.println("Mini Statement");
-        int start = (statementIndex - statementCount + miniStatement.length) % miniStatement.length;
-        for (int i = 0; i < statementCount; i++) {
+        int start = (index - index + miniStatement.length) % miniStatement.length;
+        for (int i = 0; i < index; i++) {
             int index = (start + i) % miniStatement.length;
             System.out.println(miniStatement[index]);
         }

@@ -3,12 +3,14 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class activity_1 {
-    public static int countPairsWithSum(int[] arr, int k) {
+    public static int TwoSum(int[] arr, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int count = 0;
         for (int num : arr) {
-            count += map.getOrDefault(k - num, 0);
-            map.merge(num, 1, Integer::sum);
+            if (map.containsKey(k - num)) {
+                count += map.get(k - num);
+            }
+            map.put(num, map.getOrDefault(num,0) + 1);
         }
         return count;
     }
@@ -26,7 +28,7 @@ public class activity_1 {
         Arrays.sort(arr1);
         System.out.println("Maximum is: " + arr1[arr1.length - 1]);
         System.out.println("Minimum is: " + arr1[0]);
-        System.out.println("Count of pair with sum " + k + ": " + countPairsWithSum(arr1, k));
+        System.out.println("Count of pairs with sum " + k + ": " + TwoSum(arr1, k));
         input.close();
     }
 }
