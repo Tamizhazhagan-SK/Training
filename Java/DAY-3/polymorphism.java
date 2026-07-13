@@ -1,12 +1,13 @@
 class Person {
-	String name;
+	String name;    //attributes
 	int age;
 
-	Person(String name, int age) {
+	Person(String name, int age) {  //constructor
 		this.name = name;
 		this.age = age;
 	}
 
+    // method
 	// Method to be overridden
 	void displayInfo() {
 		System.out.println("Person: " + name + ", age " + age);
@@ -44,13 +45,8 @@ class Employee extends Person {
 	}
 
 	// Overloading displayInfo()
-	void displayInfo(double salary) {
-		System.out.println("Employee: " + name + ", age " + age + ", salary " + salary);
-	}
-
-	// Overloading displayInfo()
-	void displayInfo(String department) {
-		System.out.println("Employee: " + name + ", age " + age + ", department " + department);
+	void displayInfo(double salary, String department) {
+		System.out.println("Employee: " + name + ", age " + age + ", salary " + salary  + ", department " + department);
 	}
 }
 
@@ -66,8 +62,7 @@ public class polymorphism {
 		e.displayInfo();
 		
 		// Overloading: calling displayInfo with different parameters
-		e.displayInfo(50000);
-		e.displayInfo("IT");
+		e.displayInfo(100, "Cloud");
 	}
 
 }
