@@ -29,6 +29,7 @@ public class activity_1 {
         System.out.println("Maximum is: " + arr1[arr1.length - 1]);
         System.out.println("Minimum is: " + arr1[0]);
         System.out.println("Count of pairs with sum " + k + ": " + TwoSum(arr1, k));
+        
         input.close();
     }
 }
