@@ -88,9 +88,20 @@ using:
 interface - a contract between methods (can also be used to protect the method access)
 methods
 
+// all the methods are abstract class by default
+// you can't create constructors and objects in interface
+// all members are public
+// 100% abstraction 
+// can be used in client side to completely abstract the working (loosly coupled code)
+
 
 
 abstract class: it allows to write abstract and concrete methods of an interface.
+
+// we can create constructors but can't create object.
+// but subclass can invoke the abstract class constructors to initialize the properties present in them
+// partial abstraction
+// if you don't know the logic and its work
 
 sometimes when class can't implement all methods of interface, we can create
 abstract class by implementing the methods that knows the logic
