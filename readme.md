@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <td valign="top" width="220">
-      <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt="Java Logo" width="180" />
+    <td valign="center" width="220">
+      <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt="Java Logo" width="300" />
     </td>
     <td valign="top" style="padding-left: 20px;">
       <h2>Project Overview</h2>
