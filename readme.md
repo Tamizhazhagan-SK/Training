@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td valign="center" width="220">
-      <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt="Java Logo" width="300" />
+      <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt="Java Logo" width="1000" />
     </td>
     <td valign="top" style="padding-left: 20px;">
       <h2>Project Overview</h2>
