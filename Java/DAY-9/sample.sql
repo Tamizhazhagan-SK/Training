@@ -209,3 +209,186 @@ SELECT ename, TIMESTAMPDIFF(YEAR,hiredate,CURDATE()) AS experience FROM emp;
 SELECT ename, DATE_ADD(hiredate,INTERVAL 1 YEAR) AS confirmation_date FROM emp;
 
 
+
+select "__________________________________" as "************************************";
+ 
+-- second max and min
+select max(sal) as 'second max salary' from emp
+    where sal < (select max(sal) from emp);
+ 
+select "__________________________________" as "************************************";
+ 
+-- alternative way to find the 2nd max using distinct and limit
+select distinct sal from emp order by sal desc limit 1,1;
+ 
+select "__________________________________" as "************************************";
+ 
+-- alternative way to find the 3rd max using distinct and limit
+-- limit 2, 1 means skip 1st 2 rows and retyrns the next row
+select distinct sal from emp order by sal desc limit 2,1;
+ 
+select "__________________________________" as "************************************";
+ 
+-- write the query in an alternative way to find the 2nd and 3rd min sal
+select distinct sal as 'second min salary' from emp order by sal asc limit 1,1;
+ 
+select "__________________________________" as "************************************";
+ 
+select distinct sal as 'third min salary' from emp order by sal asc limit 2,1;
+ 
+select "__________________________________" as "************************************";
+ 
+-- GROUP BY CLAUSE -  mainly used in aggregate function
+select deptno, count(*) from emp group by deptno;
+
+select "__________________________________" as "************************************";
+
+-- Find employees who are more than company average
+select ename, sal as 'more than average salary' from emp where sal > (select avg(sal) from emp); 
+
+select "__________________________________" as "************************************";
+
+-- Find employees who make more than at least one person in the department;
+SELECT ename, sal as 'more than one person in dept', deptno FROM emp WHERE sal > ANY (SELECT sal FROM emp WHERE deptno = 30);
+
+select "__________________________________" as "************************************";
+
+-- Find employees who make more than every person in the department;
+SELECT ename, sal 'more than every person in dept', deptno FROM emp WHERE sal > ALL (SELECT sal FROM emp WHERE deptno = 40);
+
+select "__________________________________" as "************************************";
+
+select e.ename, d.dname, d.loc
+    from emp e left join dept d on e.deptno = d.deptno;
+
+select "__________________________________" as "************************************";
+
+select e.ename, d.dname, d.loc
+    from emp e right join dept d on e.deptno = d.deptno;
+ 
+-- inner join - shows only the matching results of 2 tables
+ 
+select "______________________________" as "******************************";
+ 
+ 
+-- left join : lists all the rows of left table and from the right table
+
+-- lists only the matching rows
+ 
+select empno, ename, sal, e.deptno, dname, loc
+
+    from emp e LEFT JOIN dept d on e.deptno = d.deptno;
+ 
+select "______________________________" as "******************************";
+ 
+-- right join : lists all the rows of right table and from the left table lists
+
+-- only the matching rows
+ 
+select empno, ename, sal, e.deptno, dname, loc
+
+    from emp e RIGHT JOIN dept d on e.deptno = d.deptno;
+ 
+select "______________________________" as "******************************";
+
+-- full join: lists all the rows of both the tables even unmatched rows
+ 
+ 
+select "______________________________" as "******************************";
+
+-- cross join: it is a cartesian product of both the tables; every row of a left table 
+
+-- will have all the rows of right table
+
+-- self join: it is to join the same table, eg- u have manager id which is an
+
+-- employee id , for the employee you have to show the manager and manager name\
+ 
+create table meals(name varchar(20), price double);
+
+create table drinks(name varchar(20), price double);
+ 
+insert into meals values('Veg Biryani', 200), ('Chicken Biryani', 250), ('Tandoori Roti', 40);
+
+insert into drinks values('Lemonade', 50), ('Coke', 40), ('Iced tea', 70);
+
+select * from meals;
+
+select "______________________________" as "******************************";
+
+select * from drinks;
+
+-- cross-join
+
+select "______________________________" as "******************************";
+
+select m.name, m.price, RPAD(d.name,8,'*'), d.price, m.price + d.price as "Total Price" from meals m CROSS JOIN drinks d;
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+/*
+SQL JOINS:
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+SELF JOIN
+CROSS JOIN
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
