@@ -149,10 +149,46 @@ str4 = "2344_.8fcuk"  //when starting with character; it will show the data type
 }
 
 
+console.log("=================================================");
 
 
+let nums = [10,20,30,40,50];
+
+let array2d = [[10,20],[30,40],[50,60]];
+
+console.log(nums);
+console.log("=================================================");
+console.log(array2d);
+
+nums.push(60);
+console.log("=================================================");
+
+console.log(nums);
+
+array2d.push([70,80]);
+console.log("=================================================");
+console.log(array2d);
 
 
+let sum = 0;
+for (let i=0; i<nums.length;i++){
+    sum+=nums[i];
+}
+console.log("=================================================");
+console.log("sum: " + sum);
+
+nums.forEach(function(value){
+    sum+=value;
+    console.log(value);
+});
+
+
+console.log("sum: " + sum);
+
+console.log("=================================================");
+
+let doubles = nums.map(n=>n*2);
+console.log(doubles);
 
 
 
