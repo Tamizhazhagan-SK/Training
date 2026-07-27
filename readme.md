@@ -1,4 +1,4 @@
-# Technical Training Project
+# Technical Training
 
 <table>
   <tr>
