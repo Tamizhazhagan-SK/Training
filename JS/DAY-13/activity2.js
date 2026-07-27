@@ -15,5 +15,3 @@ console.log(oddnums);
 console.log(total);
 
 
-// docker run --rm -v ${PWD}:/app -w /app node node index.js 
-// use this command to use the docker image for javascript and node.js
