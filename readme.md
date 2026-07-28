@@ -13,7 +13,9 @@
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/html-icon.png" alt="html" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png" alt="css" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/javascript-programming-language-icon.png" alt="javascript" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" alt="docker" width="50"/>      
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" alt="docker" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spring-boot-icon.png" alt="springboot" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt="postman" width="50"/>
     </td>
     <td valign="top" style="padding-left: 20px;">
     <h1>Week 1-3</h1>
