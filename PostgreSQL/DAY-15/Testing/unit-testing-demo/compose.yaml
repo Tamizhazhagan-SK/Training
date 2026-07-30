@@ -1,0 +1,9 @@
+services:
+  unit-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: unit-testing-demo
+    working_dir: /workspace
+    volumes:
+      - .:/workspace

@@ -48,6 +48,10 @@ public class ProductService {
         repository.delete(product);
     }
 
+    public void deleteAll() {
+        repository.deleteAll();
+    }
+
     private Product findEntity(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
