@@ -18,6 +18,7 @@
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spring-boot-icon.png" alt="springboot" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt="postman" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postgresql-icon.png" alt="psql" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bash-unix-shell-icon.png" alt="bash" width="50"/>
     </td>
     <td valign="top" style="padding-left: 20px;">
     <h1>Week 1-3</h1>
