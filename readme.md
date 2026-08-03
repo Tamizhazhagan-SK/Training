@@ -38,8 +38,14 @@
       <h1>Week 3-5</h1>
       <h2>Key Focus Areas</h2>
       <ul>
-      <li>Docker Basics</li>
-      <li>HTML, CSS, Javascript fundamentals</li>
+        <li>DevOps Fundamentals</li>
+        <li>Advanced Git & GitHub Workflows, Git Hooks, and GitHub Actions</li>
+        <li>HTML, CSS, and JavaScript Fundamentals</li>
+        <li>Docker Containerization with Node.js Applications</li>
+        <li>Database Hosting and Management using Adminer UI</li>
+        <li>API Testing and Validation using Postman</li>
+        <li>Software Testing Concepts: Unit, Integration, System, and Acceptance Testing</li>
+        <li>CI/CD Automation and Modern Development Workflows</li>
       </ul>
     </td>
   </tr>
