@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  photo_app_1:
+    build: .
+    container_name: container_one
+    stdin_open: true
+    tty: true
+    volumes:
+      - photo_volume:/app/images
+
+  photo_app_2:
+    build: .
+    container_name: container_two
+    stdin_open: true
+    tty: true
+    volumes:
+      - photo_volume:/app/images
+
+volumes:
+  photo_volume:
+    driver: local
