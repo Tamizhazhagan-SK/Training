@@ -22,31 +22,21 @@
     </td>
     <td valign="top" style="padding-left: 20px;">
     <h1>Week 1-3</h1>
-      <h2>Key Focus Areas</h2>
-      <ul>
-        <li>Core Java Programming Concepts</li>
-        <li>Object-Oriented Programming (OOP)</li>
-        <li>Collections Framework and HashMap</li>
-        <li>Exception Handling</li>
-        <li>SQL and MySQL Fundamentals</li>
-        <li>MongoDB Basics</li>
-        <li>Java Database Connectivity (JDBC)</li>
-        <li>Git and GitHub Fundamentals</li>
-        <li>Menu-Driven Console Application example</li>
-        <li>Practice Programs</li>
-      </ul>
-      <h1>Week 3-5</h1>
-      <h2>Key Focus Areas</h2>
-      <ul>
-        <li>DevOps Fundamentals</li>
-        <li>Advanced Git & GitHub Workflows, Git Hooks, and GitHub Actions</li>
-        <li>HTML, CSS, and JavaScript Fundamentals</li>
-        <li>Docker Containerization with Node.js Applications</li>
-        <li>Database Hosting and Management using Adminer UI</li>
-        <li>API Testing and Validation using Postman</li>
-        <li>Software Testing Concepts: Unit, Integration, System, and Acceptance Testing</li>
-        <li>CI/CD Automation and Modern Development Workflows</li>
-      </ul>
+    <h2>Week 1-3: Key Focus Areas</h2>
+  <ul>
+    <li>Core Java Programming Concepts & Object-Oriented Programming (OOP)</li>
+    <li>Collections Framework, HashMap, and Exception Handling</li>
+    <li>SQL, MySQL Fundamentals, and MongoDB Basics</li>
+    <li>Java Database Connectivity (JDBC)</li>
+    <li>Git, GitHub Fundamentals, and Advanced Workflows (Git Hooks & Actions)</li>
+    <li>HTML, CSS, and JavaScript Fundamentals</li>
+    <li>DevOps Fundamentals & Containerization with Docker</li>
+    <li>Database Hosting & Management using Adminer UI</li>
+    <li>API Testing and Validation using Postman</li>
+    <li>Software Testing Concepts: Unit, Integration, System, and Acceptance Testing</li>
+    <li>CI/CD Automation, SonarQube, ArgoCD, and Nexus Integration</li>
+    <li>Menu-Driven Console Application example & Practice Programs</li>
+  </ul>
     </td>
   </tr>
 </table>
