@@ -1,0 +1,137 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+# ==================== POSTGRESQL ====================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:17-alpine
+        env:
+        - name: POSTGRES_DB
+          value: "cruddb"
+        - name: POSTGRES_USER
+          value: "cruduser"
+        - name: POSTGRES_PASSWORD
+          value: "crudpassword"
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgres-storage
+      volumes:
+      - name: postgres-storage
+        persistentVolumeClaim:
+          claimName: postgres-pv-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    app: postgres
+---
+# ==================== SPRING BOOT APP ====================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crud-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crud-api
+  template:
+    metadata:
+      labels:
+        app: crud-api
+    spec:
+      containers:
+      - name: app
+        image: tamizhsk24/java-psql-adminer:v0.1
+        imagePullPolicy: Always
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://postgres:5432/cruddb"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "cruduser"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "crudpassword"
+        - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+          value: "update"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crud-api-service
+spec:
+  type: NodePort
+  selector:
+    app: crud-api
+  ports:
+  - port: 8081
+    targetPort: 8080
+    nodePort: 30081
+---
+# ==================== ADMINER ====================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crud-adminer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crud-adminer
+  template:
+    metadata:
+      labels:
+        app: crud-adminer
+    spec:
+      containers:
+      - name: adminer
+        image: adminer:5
+        env:
+        - name: ADMINER_DEFAULT_SERVER
+          value: "postgres"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crud-adminer-service
+spec:
+  type: NodePort
+  selector:
+    app: crud-adminer
+  ports:
+  - port: 8090
+    targetPort: 8080
+    nodePort: 30090
