@@ -7,7 +7,7 @@ import requests
 
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "embeddinggemma")
-LLM_MODEL = os.getenv("LLM_MODEL", "gemma3")
+LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-r1:8b")
 
 DOCUMENT_DIRECTORY = "documents"
 VECTOR_STORE_FILE = "vector_store.json"

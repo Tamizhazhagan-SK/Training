@@ -110,6 +110,10 @@ If your container is not named `ollama`, replace `ollama` with the actual contai
 
 ## 4. Verify Ollama from the host
 
+```
+docker compose up --build -d
+```
+
 ```bash
 curl http://localhost:11434/api/tags
 ```
