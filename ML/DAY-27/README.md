@@ -1,0 +1,1 @@
+Basics of RAG and how AI is working! LLM fundamentals and its functionality and architecture!
