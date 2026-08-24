@@ -20,6 +20,10 @@
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bash-unix-shell-icon.png" alt="bash" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" alt="docker" width="50"/>
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/kubernetes-icon.png" alt="k8s" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apache-kafka-icon.png" alt="kafka" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/python-programming-language-icon.png" alt="python" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/fastapi-icon.png" alt="fastapi" width="50"/>
+
     </td>
     <td valign="top" style="padding-left: 20px;">
     <h1>Week 1-3</h1>
