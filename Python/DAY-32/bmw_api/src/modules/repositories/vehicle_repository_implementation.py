@@ -1,5 +1,7 @@
 from typing import List
 
+from sqlalchemy import select
+
 from modules.configurations.psql_connection import PGConnection
 from modules.dtos.vehicle_request import VehicleRequest
 from modules.exceptions.vehicle_not_found_exception import VehicleNotFoundException
@@ -8,21 +10,23 @@ from modules.models.vehicle import Vehicle
 from modules.repositories.vehicle_repository import VehicleRepository
 
 
-class VehicleRepositoryImplementation(VehicleRepository):
+class VehicleRepositoryImpl(VehicleRepository):
 
     def __init__(self):
         self.session = PGConnection.get_session()
 
-    def get_vehicle_by_id(self, vehicle_id: int) -> Vehicle:
-        vehicle = self.session.query(Vehicle).filter_by(id=vehicle_id).first()
+    async def get_vehicle_by_id(self, vehicle_id: int) -> Vehicle:
+        result = await self.session.execute(select(Vehicle).where(Vehicle.id == vehicle_id))
+        vehicle = result.scalar_one_or_none()
         if not vehicle:
             raise VehicleNotFoundException(f"Vehicle with ID {vehicle_id} not found.")
         return vehicle
 
-    def get_all_vehicles(self) -> List[Vehicle]:
-        return self.session.query(Vehicle).all()
+    async def get_all_vehicles(self) -> List[Vehicle]:
+        result = await self.session.execute(select(Vehicle))
+        return list(result.scalars().all())
 
-    def create_vehicle(self, vehicle_data: VehicleRequest) -> Vehicle:
+    async def create_vehicle(self, vehicle_data: VehicleRequest) -> Vehicle:
         new_vehicle = Vehicle(
             make=vehicle_data.make,
             model=vehicle_data.model,
@@ -31,14 +35,16 @@ class VehicleRepositoryImplementation(VehicleRepository):
         )
         try:
             self.session.add(new_vehicle)
-            self.session.commit()
+            await self.session.commit()
+            await self.session.refresh(new_vehicle)
             return new_vehicle
         except Exception:
-            self.session.rollback()
+            await self.session.rollback()
             raise VehicleDataException("Error occurred while creating the vehicle.")
 
-    def update_vehicle(self, vehicle_id: int, vehicle_data: VehicleRequest) -> Vehicle:
-        vehicle = self.session.query(Vehicle).filter_by(id=vehicle_id).first()
+    async def update_vehicle(self, vehicle_id: int, vehicle_data: VehicleRequest) -> Vehicle:
+        result = await self.session.execute(select(Vehicle).where(Vehicle.id == vehicle_id))
+        vehicle = result.scalar_one_or_none()
         if not vehicle:
             raise VehicleNotFoundException(f"Vehicle with ID {vehicle_id} not found.")
 
@@ -47,21 +53,23 @@ class VehicleRepositoryImplementation(VehicleRepository):
             vehicle.model = vehicle_data.model
             vehicle.year = vehicle_data.year
             vehicle.vin = vehicle_data.vin
-            self.session.commit()
+            await self.session.commit()
+            await self.session.refresh(vehicle)
             return vehicle
         except Exception:
-            self.session.rollback()
+            await self.session.rollback()
             raise VehicleDataException(f"Error occurred while updating the vehicle with ID {vehicle_id}.")
 
-    def delete_vehicle(self, vehicle_id: int) -> bool:
-        vehicle = self.session.query(Vehicle).filter_by(id=vehicle_id).first()
+    async def delete_vehicle(self, vehicle_id: int) -> bool:
+        result = await self.session.execute(select(Vehicle).where(Vehicle.id == vehicle_id))
+        vehicle = result.scalar_one_or_none()
         if not vehicle:
             raise VehicleNotFoundException(f"Vehicle with ID {vehicle_id} not found.")
 
         try:
-            self.session.delete(vehicle)
-            self.session.commit()
+            await self.session.delete(vehicle)
+            await self.session.commit()
             return True
         except Exception:
-            self.session.rollback()
+            await self.session.rollback()
             raise VehicleDataException(f"Error occurred while deleting the vehicle with ID {vehicle_id}.")

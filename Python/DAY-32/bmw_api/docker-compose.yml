@@ -13,6 +13,9 @@
     ports:
       - "5432:5432"
 
+    networks:
+      - bmw_network
+
     volumes:
       - vehicle_postgres_data:/var/lib/postgresql/data
 
@@ -31,6 +34,9 @@
     ports:
       - "8000:8000"
 
+    networks:
+      - bmw_network
+
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:postgres@postgres:5432/bmwdb
 
@@ -41,3 +47,9 @@
 
 volumes:
   vehicle_postgres_data:
+
+networks:
+  bmw_network:
+    name: bmw_network
+    external: true
+  

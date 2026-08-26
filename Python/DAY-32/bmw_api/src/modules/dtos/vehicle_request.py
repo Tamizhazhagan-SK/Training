@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from pydantic import BaseModel, Field
 
 
@@ -17,6 +15,4 @@ class VehicleRequest(BaseModel):
     model: str = Field(..., min_length=1, max_length=50, pattern="^[a-zA-Z0-9 ]+$", description="The model of the vehicle.")
     year: int = Field(..., ge=1900, le=2100, description="The year of manufacture of the vehicle.")
     vin: str = Field(..., min_length=17, max_length=17, pattern="^[A-HJ-NPR-Z0-9]{17}$", description="The Vehicle Identification Number (VIN).")
-    created_at: datetime = Field(..., description="The creation timestamp of the vehicle record.")
-    updated_at: datetime = Field(..., description="The last update timestamp of the vehicle record.")
     

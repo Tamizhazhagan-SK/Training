@@ -17,4 +17,4 @@ ENV PYTHONPATH=/app/src
 
 EXPOSE 8000
 
-CMD ["python", "-m", "uvicorn", "vehiclemodule.main:api", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "uvicorn", "modules.main:api", "--host", "0.0.0.0", "--port", "8000"]

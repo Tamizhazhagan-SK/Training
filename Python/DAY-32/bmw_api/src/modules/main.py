@@ -1,9 +1,19 @@
-﻿# call controller and create models
+﻿from contextlib import asynccontextmanager
+
 from modules.configurations.psql_connection import base, engine
 from modules.controllers.vehicle_controller import router
 from modules.models.vehicle import Vehicle
 
 from fastapi import FastAPI
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    async with engine.begin() as connection:
+        await connection.run_sync(base.metadata.create_all)
+    yield
+    await engine.dispose()
+
 
 # This is the main FastAPI application entry point.
 # When the server starts, FastAPI loads all route definitions registered here.
@@ -11,10 +21,8 @@ api = FastAPI(
     title="Vehicle Management API",
     description="API for managing vehicles",
     version="1.0",
+    lifespan=lifespan,
 )
-
-# generate the tables in the database
-base.metadata.create_all(bind=engine)
 
 # include the controller router
 api.include_router(router)

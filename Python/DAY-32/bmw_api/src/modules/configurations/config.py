@@ -12,4 +12,4 @@ class Config:
         self.db_name=os.getenv('pg_database')
 
     def get_database_connection_string(self):
-        return f"postgresql+psycopg2://{self.db_user}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"    
+        return f"postgresql+psycopg://{self.db_user}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"    
