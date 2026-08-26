@@ -1,0 +1,24 @@
+services:
+  pyspark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bmw-pyspark
+    env_file:
+      - ./src/modules/.env
+    environment:
+      HADOOP_HOME: /opt/hadoop
+      PYSPARK_PYTHON: /usr/local/bin/python
+      PYSPARK_DRIVER_PYTHON: /usr/local/bin/python
+    command: >-
+      sh -c "python src/modules/utils/spark_pg.py &&
+      python src/modules/utils/etl.py"
+    networks:
+      - bmw_network
+    volumes:
+      - ./src/modules/reports:/app/src/modules/reports
+
+networks:
+  bmw_network:
+    name: bmw_network
+    external: true
