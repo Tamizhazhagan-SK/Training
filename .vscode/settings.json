@@ -2,5 +2,24 @@
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
         "file:/**/*.parquet": "jupyter-data-wrangler"
-    }
+    },
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "connectionTimeoutMillis": 10000
+            },
+            "ssh": "Disabled",
+            "previewLimit": 100,
+            "server": "small-potato-instance-1.cjumewai4eab.us-west-2.rds.amazonaws.com",
+            "port": 5432,
+            "askForPassword": true,
+            "sshOptions": {
+                "port": 22
+            },
+            "driver": "PostgreSQL",
+            "name": "small-potato",
+            "database": "postgres",
+            "username": "postgres"
+        }
+    ]
 }

@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: bmw_dealer_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bmw_dealer_inventory
+    ports:
+      - "5432:5432"
+    volumes:
+      - bmw_dealer_pg_data:/var/lib/postgresql/data
+
+volumes:
+  bmw_dealer_pg_data:

@@ -1,7 +1,13 @@
+import os
+import sys
 from pathlib import Path
 
+os.environ["PYSPARK_PYTHON"] = sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
+
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, count, to_date, when
+from pyspark.sql.functions import col, to_date, udf
+from pyspark.sql.types import StringType
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 CSV_PATH = PROJECT_ROOT / "src" / "modules" / "data" / "bmw_customers.csv"
@@ -62,12 +68,22 @@ customer_df = (
     .withColumn("annual_km_driven", col("annual_km_driven").cast("int"))
 )
 
+
 # Classify vehicles by purchase price in Indian rupees.
+def classify_price(purchase_price_inr):
+    if purchase_price_inr <= 7000000:
+        return "Budget"
+    elif purchase_price_inr <= 15000000:
+        return "Premium"
+    else:
+        return "Luxury"
+
+
+classify_price_udf = udf(classify_price, StringType())
+
 customer_df = customer_df.withColumn(
     "price_category",
-    when(col("purchase_price_inr") <= 7000000, "Budget")
-    .when(col("purchase_price_inr") <= 15000000, "Premium")
-    .otherwise("Luxury"),
+    classify_price_udf(col("purchase_price_inr")),
 )
 
 # Store the cleaned customer data as a Parquet report.
@@ -80,4 +96,3 @@ spark_ui_url = spark.sparkContext.uiWebUrl or "unavailable"
 print(f"ETL completed successfully. Parquet file saved to: {PARQUET_PATH}")
 print(f"Spark UI: {spark_ui_url}")
 spark.stop()
-

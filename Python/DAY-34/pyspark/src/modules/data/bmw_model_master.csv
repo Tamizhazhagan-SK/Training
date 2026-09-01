@@ -1,0 +1,9 @@
+model,segment,fuel_type,body_type,base_price_inr,launch_year
+BMW_320i,Sedan,Petrol,Sedan,4599000,2019
+BMW_330e,Sedan,Hybrid,Sedan,6499000,2021
+BMW_X1,Compact SUV,Petrol,SUV,4990000,2020
+BMW_X3,Mid SUV,Diesel,SUV,6590000,2022
+BMW_X5,Full SUV,Diesel,SUV,9890000,2021
+BMW_i4,Sedan,Electric,Sedan,7290000,2023
+BMW_i5,Sedan,Electric,Sedan,8390000,2024
+BMW_iX,Full SUV,Electric,SUV,11990000,2023
