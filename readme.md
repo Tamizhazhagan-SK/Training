@@ -24,26 +24,26 @@
     <li>Menu-Driven Console Application examples & Practice Programs</li>
   </ul>
     </td>
-    <td valign="center" width="220">
+    <td valign="center" width="220" style="text-align: center;">
       <p><strong>Week 1-3 Tech Stack</strong></p>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/java-programming-language-icon.png" alt="Java" width="50" />
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/git-icon.png" alt="Git" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="GitHub" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mysql-icon.png" alt="MySQL" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png" alt="MongoDB" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/html-icon.png" alt="HTML" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png" alt="CSS" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/javascript-programming-language-icon.png" alt="JavaScript" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nginx-icon.png" alt="Nginx" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spring-boot-icon.png" alt="Spring Boot" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt="Postman" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postgresql-icon.png" alt="PostgreSQL" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bash-unix-shell-icon.png" alt="Bash" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" alt="Docker" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/kubernetes-icon.png" alt="Kubernetes" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Compute/EC2.svg" alt="EC2" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Containers/Elastic-Container-Registry.svg" alt="ECR" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Containers/Elastic-Kubernetes-Service.svg" alt="EKS" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/java-programming-language-icon.png" alt="Java" width="80" />
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/git-icon.png" alt="Git" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="GitHub" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mysql-icon.png" alt="MySQL" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png" alt="MongoDB" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/html-icon.png" alt="HTML" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/css-icon.png" alt="CSS" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/javascript-programming-language-icon.png" alt="JavaScript" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nginx-icon.png" alt="Nginx" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spring-boot-icon.png" alt="Spring Boot" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt="Postman" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postgresql-icon.png" alt="PostgreSQL" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bash-unix-shell-icon.png" alt="Bash" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/docker-icon.png" alt="Docker" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/kubernetes-icon.png" alt="Kubernetes" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Compute/EC2.svg" alt="EC2" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Containers/Elastic-Container-Registry.svg" alt="ECR" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Containers/Elastic-Kubernetes-Service.svg" alt="EKS" width="80"/>
     </td>
   </tr>
 </table>
@@ -77,20 +77,20 @@
     <li>Data Security & Encryption</li>
   </ul>
     </td>
-    <td valign="center" width="220">
+    <td valign="center" width="220" style="text-align: center;">
       <p><strong>Week 3-5 Tech Stack</strong></p>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/python-programming-language-icon.png" alt="Python" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apache-spark-icon.png" alt="Spark" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/hadoop-icon.png" alt="Hadoop" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apache-kafka-icon.png" alt="Kafka" width="50"/>
-      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png" alt="AWS" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" alt="S3" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Analytics/Athena.svg" alt="Athena" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Analytics/Redshift.svg" alt="Redshift" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Database/Aurora.svg" alt="Aurora" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Database/RDS.svg" alt="RDS" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Machine-Learning/SageMaker.svg" alt="SageMaker" width="50"/>
-      <img src="https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" alt="CloudWatch" width="50"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/python-programming-language-icon.png" alt="Python" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apache-spark-icon.png" alt="Spark" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/hadoop-icon.png" alt="Hadoop" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apache-kafka-icon.png" alt="Kafka" width="80"/>
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png" alt="AWS" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" alt="S3" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Analytics/Athena.svg" alt="Athena" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Analytics/Redshift.svg" alt="Redshift" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Database/Aurora.svg" alt="Aurora" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Database/RDS.svg" alt="RDS" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Machine-Learning/SageMaker.svg" alt="SageMaker" width="80"/>
+      <img src="https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" alt="CloudWatch" width="80"/>
     </td>
   </tr>
 </table>
